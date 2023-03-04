@@ -6,10 +6,9 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:03:32 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/02/22 18:06:58 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/01 16:59:13 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../push_swap.h"
 
@@ -17,7 +16,7 @@ int	ft_strncmp(const char *first, const char *second, int len)
 {
 	unsigned char	*f;
 	unsigned char	*s;
-	int			i;
+	int				i;
 
 	f = (unsigned char *)first;
 	s = (unsigned char *)second;

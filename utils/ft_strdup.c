@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:32:53 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/02/22 18:06:58 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/01 16:34:51 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 	char	*ptr;
 	char	*str;
 

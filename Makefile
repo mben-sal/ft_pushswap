@@ -6,7 +6,7 @@
 #    By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 18:49:52 by mben-sal          #+#    #+#              #
-#    Updated: 2023/02/26 12:03:35 by mben-sal         ###   ########.fr        #
+#    Updated: 2023/03/02 20:39:36 by mben-sal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,10 @@ SRC = ./main.c\
 		./ft_cinq_num.c\
 		./ft_stack.c\
 		./ft_group.c\
-		./ft_push_stack.c
+		./ft_push_stack.c\
+		./ft_sortir_stack_b.c\
+		./ft_mouvement_stack_a_b.c\
+		./ft_sortir.c
 
 
 OBJ = $(SRC:.c=.o)
