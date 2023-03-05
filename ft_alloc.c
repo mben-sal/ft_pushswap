@@ -6,11 +6,17 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 21:02:40 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/04 15:19:18 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/05 20:13:16 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_assign(char **dst, char *src, char *to_free)
+{
+	*dst = src;
+	free(to_free);
+}
 
 char	**ft_alloc_str(char **av)
 {
@@ -30,7 +36,6 @@ char	**ft_alloc_str(char **av)
 	}
 	str = malloc(sizeof(char) * (count));
 	i = 1;
-	str = NULL;
 	while (av[i])
 	{
 		str = ft_strjoin(av[i], " ", str);
@@ -57,12 +62,12 @@ void	ft_check_error(int ac)
 {
 	if (ac == 1)
 	{
-		ft_printf ("error\n");
+		ft_putstr("Error\n");
 		exit(1);
 	}
 	if (ac == 2)
 	{
-		ft_printf("error\n");
+		ft_putstr("Error\n");
 		exit(1);
 	}
 }

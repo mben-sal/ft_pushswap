@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 17:19:24 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/04 21:33:49 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/05 19:13:27 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,12 @@ int	best_mouvement(t_stack *stack_a, t_stack *stack_b)
 		push_ver_a(stack_a, stack_b, move_a, move_b);
 		ft_push_stack_a(stack_b, stack_a);
 		ft_printf("pa\n");
+		move_b = ft_min_mv(tab, stack_b);
 		free(mv_a);
 		free(mv_b);
+		free(tab);
 	}
-	return (ft_min_mv(tab, stack_b));
+	return (move_b);
 }
 
 int	*ft_totale_mv(int *mv_b, int *mv_a, t_stack *stack_b)

@@ -6,7 +6,7 @@
 #    By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 18:49:52 by mben-sal          #+#    #+#              #
-#    Updated: 2023/03/02 20:39:36 by mben-sal         ###   ########.fr        #
+#    Updated: 2023/03/05 20:09:08 by mben-sal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC = ./main.c\
 		./utils/ft_strjoin.c\
 		./utils/ft_strlen.c\
 		./utils/ft_strncmp.c\
+		./utils/ft_putstr.c\
 		./ft_alloc.c\
 		./ft_arr.c\
 		./ft_cinq_num.c\

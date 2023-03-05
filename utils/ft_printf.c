@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 19:44:15 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/01 16:33:42 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/05 20:08:13 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putchar(char c, int *len)
 	(*len)++;
 }
 
-void	ft_putstr(char *s, int *len)
+void	ft_putstrr(char *s, int *len)
 {
 	int	i;
 
@@ -37,7 +37,7 @@ void	ft_check_per(va_list pf, char c, int *len)
 	if (c == 'c')
 		ft_putchar (va_arg (pf, int), len);
 	else if (c == 's')
-		ft_putstr (va_arg (pf, char *), len);
+		ft_putstrr (va_arg (pf, char *), len);
 	else
 		ft_putchar(c, len);
 }

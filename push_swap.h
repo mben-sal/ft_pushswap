@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:52:29 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/04 20:46:16 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/05 20:06:58 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int		main(int ac, char **av);
 int		ft_strlen(const char *str);
 int		ft_strncmp(const char *first, const char *second, int len);
 char	**ft_split(char const *s, char c);
-char	*ft_strjoin(char const *s1, char const *s2, char const *s3);
+char	*ft_strjoin(char const *s1, char const *s2, char *s3);
 int		ft_strlen(const char *str);
 char	*ft_strdup(const char *s1);
 char	**ft_alloc_str(char **av);
@@ -91,5 +91,6 @@ int		ft_count_var(int j, t_stack *stack, int count, int var);
 void	ft_cinq_quatre(int indic, t_stack *stack_a, t_stack *stack_b);
 void	ft_move_ab(t_stack *stack_a, t_stack *stack_b, int move_a, int move_b );
 void	ft_push_len(t_stack *stack_a, t_stack *stack_b, int indic);
+void	ft_putstr(char *s);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 13:23:16 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/04 21:33:01 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/05 20:41:07 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int	lenarr(char **spl)
 	return (len);
 }
 
-void	init_stack(t_stack *mystack, int size)
+void	init_stack(t_stack *stack, int size)
 {
-	mystack->len = 0;
-	mystack->arr = malloc(sizeof(int) * size);
+	stack->len = 0;
+	stack->arr = malloc(sizeof(int) * size);
 }
 
 void	ft_traite_cinq_num(t_stack *stack_a, t_stack *stack_b)
@@ -37,6 +37,8 @@ void	ft_traite_cinq_num(t_stack *stack_a, t_stack *stack_b)
 		ft_push_stack_a(stack_b, stack_a);
 		ft_printf("pa\n");
 	}
+	free(stack_a->arr);
+	free(stack_b->arr);
 	exit(0);
 }
 
@@ -54,28 +56,29 @@ void	ft_push_swap(char **spl)
 	if (stack_a.len <= 5)
 	{
 		ft_traite_cinq_num(&stack_a, &stack_b);
-		free(&stack_b.arr);
 	}
 	group = ft_group(&stack_a);
 	size = group[ft_max(group, stack_a)];
 	init_stack(&stack_b, lenarr(spl));
 	grand_group = ft_grand_group(&stack_a, ft_max(group, stack_a), size);
-	free(group);
-	ft_free(spl);
 	ft_sortir(&stack_a, &stack_b, size, grand_group);
-	free(grand_group);
 	best_mouvement(&stack_a, &stack_b);
 	ft_top_num(&stack_a);
-	// free(&stack_b.arr);
+	ft_free(spl);
+	free(group);
+	free(grand_group);
+	free(stack_a.arr);
+	free(stack_b.arr);
 }
 
 int	main(int ac, char **av)
 {
 	char	**spl;
 
-	if (ac <= 1)
+	if (ac == 1)
+		exit(0);
+	if (ac == 2)
 		ft_check_error(1);
 	spl = ft_alloc_str(av);
 	ft_push_swap(spl);
-	// while (1) {}
 }

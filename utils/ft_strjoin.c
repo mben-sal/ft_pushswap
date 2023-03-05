@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:45:46 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/04 12:19:41 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/05 19:08:40 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*alloc_ptr(char const *s1, char const *s2, char const *s3)
 		return (ptr);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2, char const *s3)
+char	*ft_strjoin(char const *s1, char const *s2, char *s3)
 {
 	int		i;
 	int		j;
@@ -48,5 +48,6 @@ char	*ft_strjoin(char const *s1, char const *s2, char const *s3)
 	while (s2[i])
 		ptr[j++] = s2[i++];
 	ptr[j] = '\0';
+	free(s3);
 	return (ptr);
 }
