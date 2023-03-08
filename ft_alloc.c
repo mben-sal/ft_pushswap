@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 21:02:40 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/05 20:13:16 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/06 19:40:24 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,6 @@ void	ft_check_error(int ac)
 	if (ac == 1)
 	{
 		ft_putstr("Error\n");
-		exit(1);
-	}
-	if (ac == 2)
-	{
-		ft_putstr("Error\n");
-		exit(1);
+		exit(0);
 	}
 }

@@ -6,26 +6,24 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 20:03:16 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/05 16:48:34 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/08 20:35:41 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_check_max(int res)
+void	ft_check_max(long res, int sign)
 {
+	res *= sign;
 	if (res > 2147483647 || res < -2147483648)
-	{
 		ft_check_error(1);
-	}
-	return (res);
 }
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	res;
+	int		i;
+	int		sign;
+	long	res;
 
 	i = 0;
 	sign = 1;
@@ -35,7 +33,7 @@ int	ft_atoi(const char *str)
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign = -1;
+			sign *= -1;
 		i++;
 	}	
 	while (str[i] >= 48 && str[i] <= 57)
@@ -44,7 +42,7 @@ int	ft_atoi(const char *str)
 		res = res + str[i] - 48;
 		i++;
 	}
-	ft_check_max(res);
+	ft_check_max(res, sign);
 	if (str[i] != '\0')
 		ft_check_error(1);
 	return (res * sign);

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:52:29 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/05 20:06:58 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/08 20:10:25 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	ft_check_num_sortir(t_stack *stack_a);
 void	ft_trois_num(t_stack *stack_a);
 void	ft_deux_num(t_stack *stack_a);
 void	ft_cinq_and_quatre(t_stack *stack_a, t_stack *stack_b);
-int		ft_check_max(int res);
+void	ft_check_max(long res, int sign);
 char	*ft_alloc_ptr(char const *s1, char const *s2, char const *s3);
 void	ft_traite_cinq_num(t_stack *stack_a, t_stack *stack_b);
 int		lenarr(char **spl);
