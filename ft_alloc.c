@@ -6,17 +6,11 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 21:02:40 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/06 19:40:24 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:59:17 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	ft_assign(char **dst, char *src, char *to_free)
-{
-	*dst = src;
-	free(to_free);
-}
 
 char	**ft_alloc_str(char **av)
 {
@@ -34,7 +28,7 @@ char	**ft_alloc_str(char **av)
 		count += ft_strlen(av[i]);
 		i++;
 	}
-	str = malloc(sizeof(char) * (count));
+	str = NULL;
 	i = 1;
 	while (av[i])
 	{

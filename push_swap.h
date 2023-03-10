@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:52:29 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/08 20:10:25 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:43:36 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ft_check_error(int ac);
 void	ft_swap(t_stack *stack);
 void	ft_push_stack_a(t_stack *first, t_stack *last);
 int		*ft_group(t_stack *stack);
-int		ft_max(int *group, t_stack stack);
+int		ft_max(int *group, t_stack *stack);
 void	ft_sortir(t_stack *stack_a, t_stack *stack_b, int indic, int *tab);
 void	ft_rotate(t_stack *stack);
 int		*ft_grand_group(t_stack *stack_a, int indic, int tab_head);

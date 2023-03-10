@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 13:23:16 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/08 20:28:26 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:58:48 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ void	ft_push_swap(char **spl)
 		ft_traite_cinq_num(&stack_a, &stack_b);
 	}
 	group = ft_group(&stack_a);
-	size = group[ft_max(group, stack_a)];
+	size = group[ft_max(group, &stack_a)];
 	init_stack(&stack_b, lenarr(spl));
-	grand_group = ft_grand_group(&stack_a, ft_max(group, stack_a), size);
+	grand_group = ft_grand_group(&stack_a, ft_max(group, &stack_a), size);
 	ft_sortir(&stack_a, &stack_b, size, grand_group);
 	best_mouvement(&stack_a, &stack_b);
 	ft_top_num(&stack_a);

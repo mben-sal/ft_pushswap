@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 21:33:22 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/05 11:03:23 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:53:45 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	*ft_group(t_stack *stack)
 	int	j;
 	int	*group;
 
-	j = 1;
+	j = -1;
 	group = malloc(sizeof(int) * stack->len);
 	while (++j < stack->len)
 	{
@@ -58,7 +58,7 @@ int	*ft_group(t_stack *stack)
 	return (group);
 }
 
-int	ft_max(int *group, t_stack stack)
+int	ft_max(int *group, t_stack *stack)
 {
 	int	i;
 	int	var;
@@ -67,7 +67,7 @@ int	ft_max(int *group, t_stack stack)
 	i = 0;
 	indic = 0;
 	var = group[i];
-	while (i < stack.len)
+	while (i < stack->len)
 	{
 		if (var < group[i])
 		{
