@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp .c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/22 20:03:32 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/01 16:59:13 by mben-sal         ###   ########.fr       */
+/*   Created: 2023/03/11 14:13:39 by mben-sal          #+#    #+#             */
+/*   Updated: 2023/03/11 14:13:45 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_strncmp(const char *first, const char *second, int len)
+int	ft_strncmp(const char *first, const char *second, size_t len)
 {
 	unsigned char	*f;
 	unsigned char	*s;
-	int				i;
+	size_t			i;
 
 	f = (unsigned char *)first;
 	s = (unsigned char *)second;

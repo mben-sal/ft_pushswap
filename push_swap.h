@@ -6,12 +6,16 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:52:29 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/10 20:43:36 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/11 16:27:11 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 # include<stdarg.h>
 # include<stdarg.h>
@@ -44,7 +48,7 @@ int		ft_atoi(const char *str);
 int		ft_printf(const char *str, ...);
 int		main(int ac, char **av);
 int		ft_strlen(const char *str);
-int		ft_strncmp(const char *first, const char *second, int len);
+int		ft_strncmp(const char *first, const char *second, size_t len);
 char	**ft_split(char const *s, char c);
 char	*ft_strjoin(char const *s1, char const *s2, char *s3);
 int		ft_strlen(const char *str);
@@ -92,5 +96,11 @@ void	ft_cinq_quatre(int indic, t_stack *stack_a, t_stack *stack_b);
 void	ft_move_ab(t_stack *stack_a, t_stack *stack_b, int move_a, int move_b );
 void	ft_push_len(t_stack *stack_a, t_stack *stack_b, int indic);
 void	ft_putstr(char *s);
+char	*ft_strnjoin(char *s1, char *s2);
+int		ft_strnlen(char *str);
+char	*ft_strchr(char *str, int c);
+char	*ft_strndup(char *s1);
+char	*ft_substr(char *s, int start, int len);
+char	*get_next_line(int fd);
 
 #endif
