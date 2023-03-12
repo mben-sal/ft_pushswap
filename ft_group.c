@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 21:33:22 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/10 20:53:45 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/12 15:54:10 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,38 +79,43 @@ int	ft_max(int *group, t_stack *stack)
 	return (indic);
 }
 
-int	*ft_tab(int var, int stack_a, int j, int *tab)
+int	*ft_tab(t_stack *stack_a, int indic, int *tab, int j)
 {
-	if (var < stack_a)
+	int	i;
+	int	var;
+
+	var = tab[j - 1];
+	i = -1;
+	while (++i < indic)
 	{
-		var = stack_a;
-		tab[j++] = var;
+		if (var < stack_a->arr[i])
+		{
+			var = stack_a->arr[i];
+			tab[j++] = var;
+		}
 	}
 	return (tab);
 }
 
-int	*ft_grand_group(t_stack *stack_a, int indic, int tab_head)
+int	*ft_grand_group(t_stack *stack_a, int indic, int size)
 {
 	int	*tab;
 	int	i;
 	int	j;
 	int	var;
 
-	tab = malloc(sizeof(int) * tab_head);
-	i = indic;
+	tab = malloc(sizeof(int) * size);
 	var = stack_a->arr[indic];
 	j = 1;
-	tab[0] = stack_a->arr[i];
-	while (i < stack_a->len)
+	tab[0] = var;
+	i = indic - 1;
+	while (++i < stack_a->len)
 	{
-		ft_tab(var, stack_a->arr[i], j, tab);
-		i++;
+		if (var < stack_a->arr[i])
+		{
+			var = stack_a->arr[i];
+			tab[j++] = var;
+		}
 	}
-	i = 0;
-	while (i < indic)
-	{
-		ft_tab(var, stack_a->arr[i], j, tab);
-		i++;
-	}
-	return (tab);
+	return (ft_tab(stack_a, indic, tab, j));
 }
