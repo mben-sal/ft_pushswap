@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:52:29 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/11 16:27:11 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/12 17:26:53 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int		*ft_mouvement_stack_a(t_stack *stack_a, t_stack *stack_b);
 int		*ft_totale_mv(int *mv_b, int *mv_a, t_stack *stack_b );
 int		ft_min_mv(int *best_mv, t_stack *stack_b);
 int		ft_positif_num(int i);
-int		best_mouvement(t_stack *stack_a, t_stack *stack_b);
+void	best_mouvement(t_stack *stack_a, t_stack *stack_b);
 void	sortir_stack_b(t_stack *stack_a, t_stack *stack_b, int indic);
 void	push_ver_a(t_stack *stack_a, t_stack *stack_b, int move_a, int move_b );
 void	ft_reverse_rotate_ab(t_stack *stack_a, t_stack *stack_b);

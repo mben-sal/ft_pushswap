@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 13:23:16 by mben-sal          #+#    #+#             */
-/*   Updated: 2023/03/12 13:38:00 by mben-sal         ###   ########.fr       */
+/*   Updated: 2023/03/12 17:30:32 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,5 @@ int	main(int ac, char **av)
 		exit(0);
 	spl = ft_alloc_str(av);
 	ft_push_swap(spl);
+	
 }
